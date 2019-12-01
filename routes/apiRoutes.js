@@ -1,14 +1,12 @@
 
 // should theoretically import the array of people
-require('../app/data/index')
+let people = require('../public/app/data/')
 
 module.exports = app => {
 
     // route to display all potential friends
 app.get('/friends',(req, res) => {
-    console.log(people[0].name)
-    console.log(people[0].photo)
-    console.log(people[0].scores)
+
     console.log(people)
     res.sendStatus(200)
 

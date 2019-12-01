@@ -9,18 +9,18 @@ let people = [{
 	scores: [1,2,3,4,5,6,7,8,9,10]
 }]
 
-// function to recieve user survey and then compare it 
-document.getElementById('submit').addEventListener('click', e => {
-    e.preventDefault()
+// // function to recieve user survey and then compare it 
+// document.getElementById('submit').addEventListener('click', e => {
+//     e.preventDefault()
 
-let matchMaker = () => {
+// let matchMaker = () => {
 
-}
+// }
 
-})
+// })
 
 
 // should theoretically export the array of people
-module.exports = () => {
+module.exports = {
 people
 }
