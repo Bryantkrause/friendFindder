@@ -16,15 +16,25 @@ console.log('this is an index')
 let survey = document.getElementById('submit').addEventListener('click', e => {
     e.preventDefault()
 
-    questions.forEach(function (x){
-console.log(x)
-let tr = document.createElement('tr')
-tr.id = x
+    for (let i = 0; i < questions.length;i++){
+let tr = document.createElement('form')
+tr.id = i
 tr.innerHTML = `
-<td>${x}</td>
+<form>
+<div class="form-group">
+  <label for="exampleFormControlSelect1">${questions[i]}</label>
+  <select class="form-control" id="exampleFormControlSelect1">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+</div>
+</form>
 `
 document.getElementById('survey').append(tr)
-    })
+    }
     })
 
 
