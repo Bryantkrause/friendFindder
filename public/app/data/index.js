@@ -53,23 +53,20 @@ document.getElementById('survey').append(survey)
         // update survey with users information
       for (let i = 0; i < 10 ;i++){
         answers.push(document.getElementById(`${i}`).value)
-    
       }
     }
+
+    axios.post('/friends', answers)
+    .then(res => {
+      console.log(res)
+    })
+    .catch(e => console.log(e))
+
       console.log(answers)
     })
 
 
-
-// // function to recieve user survey and then compare it 
-// document.getElementById('submit').addEventListener('click', e => {
-//     e.preventDefault()
-
-// let matchMaker = () => {
-
-// }
-
-// })
-
-
-// should theoretically export the array of people
+// get user profile data
+let usinator =  () => {
+  console.log('get user data')
+}
