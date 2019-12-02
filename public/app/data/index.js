@@ -13,15 +13,16 @@ let questions = ['How do you feel about how much time you spend together?',
 console.log(questions)
 console.log('this is an index')
 
+let answers = []
 
     for (let i = 0; i < questions.length;i++){
 let survey = document.createElement('form')
-survey.id = i
+// survey.id = i
 survey.innerHTML = `
 <form>
 <div class="form-group">
   <label for="exampleFormControlSelect1">${questions[i]}</label>
-  <select class="form-control" id="exampleFormControlSelect1">
+  <select class="form-control" id=${i}>
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -34,7 +35,22 @@ survey.innerHTML = `
 document.getElementById('survey').append(survey)
     }
     
-    document.getElementById('survey').addEventListener('click')
+
+    // addEventListener('click', e => {
+    //   e.preventDefault() 
+    //   console.log(e)
+
+    // })
+
+
+    document.getElementById('submit').addEventListener('click', e => {
+      e.preventDefault()
+      console.log('you have clicked my button')
+      
+      for (let i = 0; i < 10 ;i++){
+        console.log(document.getElementById(`${i}`).value)
+      }
+    })
 
 
 // // function to recieve user survey and then compare it 
