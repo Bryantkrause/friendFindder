@@ -34,7 +34,7 @@ survey.innerHTML = `
 document.getElementById('survey').append(survey)
     }
     
-
+    document.getElementById('survey').addEventListener('click')
 
 
 // // function to recieve user survey and then compare it 
