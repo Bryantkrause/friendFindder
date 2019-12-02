@@ -42,15 +42,23 @@ document.getElementById('survey').append(survey)
 
     // })
 
-
+    // grab user survry information
     document.getElementById('submit').addEventListener('click', e => {
       e.preventDefault()
       console.log('you have clicked my button')
-      
+      // only accept information if survey has nott been filled out
+      if (answers.length > 1){
+        console.log('nah')
+      } else {
+        // update survey with users information
       for (let i = 0; i < 10 ;i++){
-        console.log(document.getElementById(`${i}`).value)
+        answers.push(document.getElementById(`${i}`).value)
+    
       }
+    }
+      console.log(answers)
     })
+
 
 
 // // function to recieve user survey and then compare it 
