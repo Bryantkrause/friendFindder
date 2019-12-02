@@ -13,13 +13,11 @@ let questions = ['How do you feel about how much time you spend together?',
 console.log(questions)
 console.log('this is an index')
 
-let survey = document.getElementById('submit').addEventListener('click', e => {
-    e.preventDefault()
 
     for (let i = 0; i < questions.length;i++){
-let tr = document.createElement('form')
-tr.id = i
-tr.innerHTML = `
+let survey = document.createElement('form')
+survey.id = i
+survey.innerHTML = `
 <form>
 <div class="form-group">
   <label for="exampleFormControlSelect1">${questions[i]}</label>
@@ -33,9 +31,9 @@ tr.innerHTML = `
 </div>
 </form>
 `
-document.getElementById('survey').append(tr)
+document.getElementById('survey').append(survey)
     }
-    })
+    
 
 
 
