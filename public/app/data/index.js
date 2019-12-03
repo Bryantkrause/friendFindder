@@ -14,6 +14,7 @@ console.log(questions)
 console.log('this is an index')
 
 let answers = []
+let user = []
 
     for (let i = 0; i < questions.length;i++){
 let survey = document.createElement('form')
